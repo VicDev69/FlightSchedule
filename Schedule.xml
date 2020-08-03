@@ -1,0 +1,17 @@
+<FLIGHT>
+<Airline>UKV</Airline>
+<FlightNumber>144</FlightNumber>
+<CommercialFlightNumber>FL144</CommercialFlightNumber>
+<From>EGPD</From>
+<To>EGLL</To>
+<STD>2020/04/04 21:25</STD>
+<STA>2020/04/04 22:50</STA>
+<MaxPax>-1</MaxPax>
+<MaxCargo>-1</MaxCargo>
+<Repetative>1</Repetative>
+<IsMaster>1</IsMaster>
+<BeginDate>2020/04/04 00:00</BeginDate>
+<EndDate>2021/04/04 23:59</EndDate>
+<Days>1234567</Days>
+<Payload>-1</Payload>
+</FLIGHT>
