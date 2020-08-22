@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule", "FlightSchedule.csproj", "{67355916-E727-4118-8A42-B507A6DFDC13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightInfo", "..\FlightInfo\FlightInfo.csproj", "{154C28D9-1D3B-4BE5-B03A-7E468F05968D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA5FB83D-B0E9-437D-862E-3801AB7FB673}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{67355916-E727-4118-8A42-B507A6DFDC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67355916-E727-4118-8A42-B507A6DFDC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67355916-E727-4118-8A42-B507A6DFDC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154C28D9-1D3B-4BE5-B03A-7E468F05968D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154C28D9-1D3B-4BE5-B03A-7E468F05968D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154C28D9-1D3B-4BE5-B03A-7E468F05968D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154C28D9-1D3B-4BE5-B03A-7E468F05968D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
