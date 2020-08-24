@@ -70,12 +70,14 @@ namespace FlightSchedule
                     string departing = firstSheet.Cells[i, 2].Text;
                     gridView.Rows[k].Cells[l++].Value = departing;
                     flight.departingFrom = departing;
+                    flight.departureTime = departing;
                     //TODO split departing into ICAO and departure time
                     string duration = firstSheet.Cells[i, 4].Text;
                     gridView.Rows[k].Cells[l++].Value = duration;
                     string arriving = firstSheet.Cells[i, 5].Text;
                     gridView.Rows[k].Cells[l++].Value = arriving;
                     flight.arrivingAt = arriving;
+                    flight.arrivalTime = duration;
                     //TODO split arriving onto ICAO and arrival time
                     StringBuilder sb = new StringBuilder();                   
                     for (int j = 7; j < 14; j++)
