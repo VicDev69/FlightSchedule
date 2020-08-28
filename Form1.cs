@@ -5,6 +5,7 @@ using System.Text;
 using OfficeOpenXml;
 using FlightInfo;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FlightSchedule
 {
@@ -15,6 +16,12 @@ namespace FlightSchedule
         public Form1()
         {
             InitializeComponent();
+            dtpStartDate.Format = DateTimePickerFormat.Custom;
+            dtpStartDate.CustomFormat = "dd/mm/yyyy HH:mm";
+            dtpStartDate.Value = DateTime.Today;
+            dtpEndDate.Format = DateTimePickerFormat.Custom;
+            dtpEndDate.CustomFormat = "dd/MM/yyyy HH/mm";
+            dtpEndDate.Value = dtpStartDate.Value.AddYears(1).AddMinutes(-1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,9 +42,11 @@ namespace FlightSchedule
             if (fdlg.ShowDialog() == DialogResult.OK)
             {
                 // Open file for reading
-                fName = fdlg.FileName;
-                if (!string.IsNullOrEmpty(fName))
+
+                
+                if (!string.IsNullOrEmpty(fdlg.FileName))
                 {
+                    fName = fdlg.FileName;
                     OpenAndReadFile(fdlg.FileName);
                 }
             }
@@ -50,7 +59,7 @@ namespace FlightSchedule
                 var firstSheet = package.Workbook.Worksheets["First Sheet"];
                 var rowCount = firstSheet.Dimension.Rows;
                 var colCount = firstSheet.Dimension.Columns;
-                int rc = 25;
+                int rc = 150;
                 gridView.RowCount = rc;
                 gridView.ColumnCount = 6;
                 int k = 0;
@@ -103,6 +112,11 @@ namespace FlightSchedule
                 }
             }
 
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.Value = dtpStartDate.Value.AddYears(1).AddMinutes(-1);
         }
     }
 
